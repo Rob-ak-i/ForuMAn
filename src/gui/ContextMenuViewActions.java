@@ -37,7 +37,7 @@ public class ContextMenuViewActions {
 			Parameters pars=part.properties;
 			String forumKey=(String) part.getProperty(Parameters.parameter_ForumKey);
 			if(forumKey==null) {System.out.println("Could not find field '"+Parameters.parameter_ForumKey+"' or it is not user selected");}
-			int userID=(int) part.getProperty(Parameters.parameter_ID);
+			int userID=Integer.valueOf((String) part.getProperty(Parameters.parameter_ID));
 			
 			Reports.createUserReport(forumKey, userID);
 		}
